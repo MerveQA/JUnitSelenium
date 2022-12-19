@@ -35,7 +35,7 @@ public class C01_Locators {
 
     @After
     public void tearDown(){
-        driver.quit();
+      //  driver.quit();
     }
 
 
@@ -108,7 +108,7 @@ email.sendKeys("Basardık");
     public void relativeXPath(){
         // path ---> //input[@id='session_key']
        WebElement email  = driver.findElement(By.xpath("//input[@id='session_key']"));
-
+        email.sendKeys("Mesaj var ... ");
     }
 
 
@@ -116,7 +116,33 @@ email.sendKeys("Basardık");
     public void multipleAttributeXPath(){
         // path ---> //input[@class='input__input'][@type='text']
         WebElement email  = driver.findElement(By.xpath("//input[@class='input__input'][@type='text']"));
+        email.sendKeys("Mesaj var ... ");
+    }
+
+
+    @Test
+    public void andOrXPath(){
+        // path ---> //input[@class='input__input'][@type='text']
+        WebElement email  = driver.findElement(By.xpath("//input[@class='input__input'and @type='text']"));
+        email.sendKeys("Mesaj var ... ");
 
     }
+
+
+    @Test
+    public void containsXPath(){
+        // path ---> //input[contains(@id,'key')]
+        WebElement email  = driver.findElement(By.xpath("//input[contains(@id,'key')]"));
+        email.sendKeys("Mesaj var ... ");
+
+    }
+
+    @Test
+    public void textXPath(){
+        // path --->  //button[contains(text(),' Oturum')]
+        WebElement email  = driver.findElement(By.xpath("//button[contains(text(),' Oturum')]"));
+
+    }
+
 
 }
