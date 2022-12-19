@@ -1,6 +1,6 @@
 package Day5_LocatorPractice;
 
-public class C05_Task {
+public class HomeWork01 {
     //    Go to URL: https://demoqa.com/
     //    Click on Elements.
     //    Click on Checkbox.
