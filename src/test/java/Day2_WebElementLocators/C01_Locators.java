@@ -8,35 +8,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.BaseTest;
 
 import java.time.Duration;
 import java.util.List;
 
-public class C01_Locators {
+public class C01_Locators extends BaseTest {
 
-    WebDriver driver;
 
-    @Before
-    public void setup() {
-
-        //Driver olusturuldu
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-        //sayfanin yuklenmesi beklendi
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-        //LinkedIn sitesine gidildi
-        driver.get("https://www.linkedin.com/");
-
-        // driver imiz maximize edildi
-        driver.manage().window().maximize();
-    }
-
-    @After
-    public void tearDown(){
-        driver.quit();
-    }
 
 
     @Test

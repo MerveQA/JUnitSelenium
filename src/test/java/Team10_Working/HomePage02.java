@@ -69,7 +69,7 @@ public class HomePage02 {
 
         //   6. Enter name and email address
         driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Merve");
-        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys("adana@gmail.com");
+        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys("adanaKare@gmail.com");
 
         //   7. Click 'Signup' button
         WebElement signUp = driver.findElement(By.xpath("//button[text()='Signup']"));
@@ -104,6 +104,16 @@ public class HomePage02 {
         select3.selectByValue("2003");
 
         //   10. Select checkbox 'Sign up for our newsletter!'
+        WebElement newsletter = driver.findElement(By.xpath("//label[text()='Sign up for our newsletter!']"));
+        newsletter.click();
+
+
+        //   11. Select checkbox 'Receive special offers from our partners!'
+        WebElement partners = driver.findElement(By.xpath("//input[@id='optin']"));
+        partners.click();
+
+        //   12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
+
 
     }
 }

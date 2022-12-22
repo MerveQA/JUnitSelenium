@@ -33,22 +33,28 @@ public class HomeWork01 {
 
     @After
     public void tearDown() {
+        //  Tüm sayfaları kapatınız.
         driver.quit();
     }
 
     @Test
     public void Test() {
+        //  https://id.heroku.com/login sayfasına gidiniz.
         driver.get("https://id.heroku.com/login");
 
+        //  Bir mail adresi giriniz.
         WebElement buttonEmail = driver.findElement(By.xpath("//input[@id='email']"));
         buttonEmail.sendKeys("merveabd_61@hotmail.com");
 
+        //  Bir password giriniz.
         WebElement buttonPassword = driver.findElement(By.xpath("//input[@id='password']"));
         buttonPassword.sendKeys("123456");
 
+        //  Login butonuna tıklayınız.
         WebElement buttonLogin = driver.findElement(By.xpath("//button[@name]"));
         buttonLogin.click();
 
+        //  "There was a problem with your login." text görünür ise "Kayıt Yapılamadı" yazdırınız.
         WebElement text = driver.findElement(By.xpath("//div[text()='There was a problem with your login.']"));
 
         if (text.isDisplayed()) {
