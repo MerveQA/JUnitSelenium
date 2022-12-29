@@ -45,7 +45,7 @@ public class C02_Practice {
     public void test01() {
         driver.findElement(By.name("q")).sendKeys("Green Mile", Keys.ENTER);
 
-       WebElement results = driver.findElement(By.id("result-stats"));
+        WebElement results = driver.findElement(By.id("result-stats"));
         System.out.println(results.getText());
 
     }

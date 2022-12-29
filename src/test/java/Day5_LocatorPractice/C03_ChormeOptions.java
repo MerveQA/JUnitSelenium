@@ -14,7 +14,8 @@ public class C03_ChormeOptions {
 
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("headless");
-        options.addArguments("start-maximized");
+      //  options.addArguments("start-maximized");
+        options.addArguments("incognito");
 
         WebDriver driver = new ChromeDriver(options);
 

@@ -30,7 +30,7 @@ public class C01_RelaviveLocator {
     @After
     public void tearDown() {
         // test sonrasinda driver kapatmak (varsa raporlari dosyalamak) icin kullanilir.
-        driver.quit();
+        // driver.quit();
     }
 
     @Test
@@ -46,14 +46,17 @@ public class C01_RelaviveLocator {
         Assert.assertTrue(logo.isDisplayed());
 
         //Mexico link locate edilip kontrol ediliyor
-        By mexicoLinkLocator = RelativeLocator.with(By.tagName("a")).toRightOf(By.xpath("//div[@lang='en']" +
-                "//a[@class='us-link']"));
+        By mexicoLinkLocator = RelativeLocator.with(By.tagName("a")).toRightOf
+                (By.xpath("//div[@lang='en']" + "//a[@class='us-link']"));
         WebElement mexicoLink = driver.findElement(mexicoLinkLocator);
         Assert.assertTrue(mexicoLink.isDisplayed());
 
+        // ABD LİNK locate edilip kontrol edildi
+        By abdLocator = RelativeLocator.with(By.tagName("a")).toRightOf
+                (By.xpath("//div[@class='country-selection']" + "//img[@alt='Canada']"));
+        WebElement abd = driver.findElement(abdLocator);
+        Assert.assertTrue(abd.isDisplayed());
 
     }
-
 }
-
 
