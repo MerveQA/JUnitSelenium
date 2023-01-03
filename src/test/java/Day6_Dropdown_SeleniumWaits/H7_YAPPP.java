@@ -1,4 +1,6 @@
-public class H7 {
+package Day6_Dropdown_SeleniumWaits;
+
+public class H7_YAPPP {
     /*
     Go to URL: http://demo.automationtesting.in/Alerts.html
     Click "Alert with OK" and click 'click the button to display an alert box:’

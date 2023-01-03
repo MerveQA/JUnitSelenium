@@ -81,6 +81,15 @@ public class C02_DropDown extends BaseTest {
     public void getAllSelectedOptions(){
         driver.get("https://output.jsbin.com/osebed/2");
         WebElement drp = driver.findElement(By.xpath("//*[@id='fruits']"));
+        Select select = new Select(drp);
+
+        select.selectByValue("apple");
+        select.selectByIndex(0);
+
+        List <WebElement> list = select.getAllSelectedOptions();
+        for (WebElement options : list){
+            System.out.println(options.getText());
+        }
 
     }
 }

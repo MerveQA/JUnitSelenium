@@ -1,11 +1,9 @@
-package Day07;
+package Day7_Iframe_WindowHandles;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.BaseTest;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 public class HomeWork_03 extends BaseTest {

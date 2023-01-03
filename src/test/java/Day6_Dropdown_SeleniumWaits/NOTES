@@ -1,0 +1,6 @@
+--ALERT
+
+driver.switchTo().alert().accept();//ok demek
+driver.switchTo().alert().dismiss();//cancel demek
+driver.switchTo().alert().getText();//metni getirir
+driver.switchTo().alert().sendKeys("");//metin kutusu doldurulur

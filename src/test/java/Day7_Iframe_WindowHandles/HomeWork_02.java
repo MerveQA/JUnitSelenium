@@ -1,4 +1,4 @@
-package Day07;
+package Day7_Iframe_WindowHandles;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;

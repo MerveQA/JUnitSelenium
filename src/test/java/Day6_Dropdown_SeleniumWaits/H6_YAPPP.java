@@ -1,4 +1,6 @@
-public class H6 {
+package Day6_Dropdown_SeleniumWaits;
+
+public class H6_YAPPP {
     /*
     Launch the browser.
     Open "https://demoqa.com/select-menu".
