@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
-public class SelectMethods extends BaseTest {
+public class C06_SelectMethods extends BaseTest {
 
     @Test
     public void selectByVisible() {
