@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import utilities.BaseTest;
 
-public class C01_WindowHandle extends BaseTest {
+public class C03_WindowHandle extends BaseTest {
 
     // https://testproject.io/
 
