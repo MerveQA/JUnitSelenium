@@ -26,14 +26,28 @@ public class C02_WriteExcelExample02 {
 
 
        // FileInputStream fis = new FileInputStream(path);
-        FileOutputStream fos = new FileOutputStream(path);
         Workbook wb = WorkbookFactory.create(fis);
         Sheet informationData = wb.getSheet("informationData");
        // informationData.getLastRowNum(); // son satırı veir
         int totalRows = informationData.getLastRowNum()-informationData.getFirstRowNum();
 
         Row row05 = informationData.createRow(4);
-        row05.createCell
+
+        row05.createCell(0).setCellValue("merve");
+        row05.createCell(1).setCellValue("kosar");
+        row05.createCell(2).setCellValue("merve@gmail.com");
+        row05.createCell(3).setCellValue("Female");
+        row05.createCell(4).setCellValue("012");
+        row05.createCell(5).setCellValue("hay");
+
+        FileOutputStream fos = new FileOutputStream(file);
+        wb.write(fos);
+
+        fis.close();
+        fos.close();
+        wb.close();
+
+
 
 
 
